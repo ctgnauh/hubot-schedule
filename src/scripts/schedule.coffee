@@ -244,8 +244,9 @@ class Job
     @pattern = pattern
     # cloning user because adapter may touch it later
     @user = {}
-    @user[k] = v for k,v of user
-    @user.room = room || @user.room
+    @user.id = user.id
+    @user.name = user.name
+    @user.room = room || user.room
     @message = message
     @cb = cb
     @job
